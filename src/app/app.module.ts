@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { MatStepperModule, MatButtonModule, MatFormFieldModule, MatInputModule } from '@angular/material';
 
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,6 +28,7 @@ import { environment } from '../environments/environment';
     MatFormFieldModule,
     MatInputModule,
     AngularFireModule.initializeApp(environment.firebaseConfig, 'burba-datacollector'),
+    AngularFirestoreModule,
     AngularFireDatabaseModule
   ],
   providers: [],

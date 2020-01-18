@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/database';
 
 @Component({
   selector: 'app-wizard',
@@ -7,10 +8,13 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./wizard.component.css']
 })
 export class WizardComponent implements OnInit {
-  isLinear = false;
+  isLinear = true;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
-  constructor(private _formBuilder: FormBuilder) { }
+
+  constructor(private db: AngularFireDatabase, private _formBuilder: FormBuilder) { 
+
+  }
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
@@ -19,6 +23,10 @@ export class WizardComponent implements OnInit {
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: ['', Validators.required]
     });
+  }
+
+  uploadData(){
+    this.db.list('/responses').push({'test':'data'});
   }
 
 }
