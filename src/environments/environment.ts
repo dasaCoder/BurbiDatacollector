@@ -6,6 +6,17 @@ export const environment = {
   production: false
 };
 
+export const firebaseConfig = {
+  apiKey: "AIzaSyA_BaTF1OO_InXzGoVXD1LVfxDrVvEbH-4",
+  authDomain: "burba-datacollector.firebaseapp.com",
+  databaseURL: "https://burba-datacollector.firebaseio.com",
+  projectId: "burba-datacollector",
+  storageBucket: "burba-datacollector.appspot.com",
+  messagingSenderId: "208947321924",
+  appId: "1:208947321924:web:9b906bab262c2694bfb011",
+  measurementId: "G-VKB8JJ5RV1"
+};
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
