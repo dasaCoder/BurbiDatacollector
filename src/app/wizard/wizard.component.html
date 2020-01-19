@@ -2,32 +2,55 @@
 
     <mat-step >
       <div>
-        <ng-template matStepLabel>Fill out your name</ng-template>
+        <ng-template matStepLabel>Details</ng-template>
 
         <div class="container">
             <mat-card>
-              <mat-card-header>
-                <mat-card-title>
-                  ආයුබෝවන්!
-                </mat-card-title>
-              </mat-card-header>
+  
+
+
               <mat-card-content>
                 <div class="row">
                   <div class="col-lg-6 col-md-6 col-xs-12">
 
+                    <div style="text-align: center;">
+                      <mat-card-title>
+                        ආයුබෝවන්!
+                      </mat-card-title>
+                      <img src="../../assets/img/bot2.png" alt="" style="max-width: 60%;">
+                    </div>
 
-                    <div>
+                    <div class="chatbubble" style="border-radius: 10px!important;">
+                      <p>
+                      HI! Thank you for come here to help... I'm developing a chatbot for sinhala languege. 
+                      For that I need to collect conversational data in Sinhala language.
+                     </p>
+                    </div>
+
+                    <div class="chatbubble" style="border-radius: 10px!important;">
+                      <p>
+                        
+                        In the following steps, I'll give you a practicle use case on regular customer need, and you need to enter a response for that in <b> Sinhala</b>.</p>
+                    </div>
+
+                    <div class="chatbubble" style="border-radius: 10px!important;">
+                      <p>
+                      In the given example for a scenario where customer asked for a details about a show room.</p>
+                    </div>
+                  <div>
 
                     </div>
                   </div>
                   <div class="col-lg-6 col-md-6 col-xs-12">
-                    <div>                     
+                    <mat-card class="bottomparent" style="padding: 10px;">  
+                      <mat-card-title>Example</mat-card-title>  
+                      <div class=" container-fluid alignbottom">
                         <div class="row" style="margin-bottom: 15px;">
                           
-                          <div class="col-md-9">
+                          <div class="col-md-11">
                             <span class="chatbubble ">සුභ උදෑසනක්! කොහොමද මම ඔයාට උදව් කරන්නෙ?</span>
                           </div>
-                          <div class="col-md-3"></div>
+                          <div class="col-md-1"></div>
                         </div>
 
                         <div class="row" style="margin-bottom: 15px;">
@@ -42,7 +65,9 @@
                             <textarea matInput class="msgbox" rows="5"></textarea>
                           </mat-form-field>
                         </div>
-                    </div>
+                      </div>                 
+
+                    </mat-card>
                   </div>
                 </div>
               </mat-card-content>

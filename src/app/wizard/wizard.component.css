@@ -29,3 +29,14 @@ button{
     border:1px solid #e0e0e0;
     
 }
+
+.alignbottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.bottomparent{
+    position: relative;
+    min-height: 150px;height: 100%;
+}
