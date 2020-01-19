@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatStepperModule, MatButtonModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatStepperModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatCardModule, MatChipsModule } from '@angular/material';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
@@ -23,6 +23,8 @@ import { environment } from '../environments/environment';
     BrowserAnimationsModule,
     MatButtonModule,
     MatStepperModule,
+    MatCardModule,
+    MatChipsModule,
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,

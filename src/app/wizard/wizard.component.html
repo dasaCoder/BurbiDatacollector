@@ -1,15 +1,59 @@
   <mat-horizontal-stepper [linear]="isLinear" #stepper>
 
-    <mat-step [stepControl]="firstFormGroup">
-      <form [formGroup]="firstFormGroup">
+    <mat-step >
+      <div>
         <ng-template matStepLabel>Fill out your name</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-button matStepperNext>Next</button>
+
+        <div class="container">
+            <mat-card>
+              <mat-card-header>
+                <mat-card-title>
+                  ආයුබෝවන්!
+                </mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-xs-12">
+
+
+                    <div>
+
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div>                     
+                        <div class="row" style="margin-bottom: 15px;">
+                          
+                          <div class="col-md-9">
+                            <span class="chatbubble ">සුභ උදෑසනක්! කොහොමද මම ඔයාට උදව් කරන්නෙ?</span>
+                          </div>
+                          <div class="col-md-3"></div>
+                        </div>
+
+                        <div class="row" style="margin-bottom: 15px;">
+                          <div class="col-md-3"></div>
+                          <div class="col-md-9">
+                            <span color="primary" class="chatbubble right">මට ඕගොල්ලන්ගෙ ගල්කිස්ස ‍ශෝ රූම් එක තියෙන තැන දැන ගන්න ඕනෙ :-)</span>
+                          </div>
+                        </div>
+
+                        <div class="row" style="margin-bottom:15px;padding:0 10px;">
+                          <mat-form-field class="full-width">
+                            <textarea matInput class="msgbox" rows="5"></textarea>
+                          </mat-form-field>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </mat-card-content>
+            </mat-card>
+            <div>
+              <button mat-raised-button color="primary"  matStepperNext>Next</button>
+            </div>
         </div>
-      </form>
+
+        
+      </div>
     </mat-step>
 
     <mat-step [stepControl]="secondFormGroup">
