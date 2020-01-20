@@ -8,7 +8,7 @@ import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angula
   styleUrls: ['./wizard.component.css']
 })
 export class WizardComponent implements OnInit {
-  isLinear = false ;
+  isLinear = true ;
 
   telephone:string;
   address:string;
@@ -16,6 +16,7 @@ export class WizardComponent implements OnInit {
   order:string;
   changeAddress:string;
   cancelOrder:string;
+  name:string;
 
   constructor(private db: AngularFireDatabase) { 
 
@@ -27,6 +28,7 @@ export class WizardComponent implements OnInit {
 
   uploadData(){
     this.db.list('/responses').push({
+      "name":this.name,
       "telephone":this.telephone,
       "address":this.address,
       "openingHousrs":this.openingHours,

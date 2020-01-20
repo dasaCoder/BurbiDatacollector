@@ -93,6 +93,39 @@
         
       </div>
     </mat-step>
+
+    
+    <mat-step>
+      <ng-template matStepLabel>SJ Fashion</ng-template>
+      <mat-card>
+        <div style="text-align: center;">
+          <div class="chatbubble" style="border-radius: 10px!important;float: none!important;background: #6c5aa6;color:#fff">
+            <p>
+              On following steps, you'll have to engage with chat bot of <b>SJ Fashion</b>
+           </p>
+          </div>
+          <img src="../../assets/img/main.png" alt="" style="width: 100%;">
+
+          <mat-card-footer >
+
+            <div class="row" style="margin-top:10px;">
+              <div class="col-md-5">
+              
+                <mat-form-field  style="width: 80%;">
+                  <input type="text" matInput [(ngModel)]="name" placeholder="Enter your name: ">
+                </mat-form-field>
+              </div>
+              <div class="col-md-7">
+                <button mat-raised-button color="primary" class="nxtbtn"  matStepperNext [disabled]="!name">Next</button>
+              </div>
+            </div>
+          </mat-card-footer>
+
+
+        </div>
+      </mat-card>
+
+    </mat-step>
 <!-- contact number -->
     <mat-step>
       
@@ -128,7 +161,7 @@
                       <div class="row" style="margin-bottom: 15px;">
                         
                         <div class="col-md-11">
-                          <span class="chatbubble ">සුභ උදෑසනක්! කොහොමද මම ඔයාට උදව් කරන්නෙ?</span>
+                          <span class="chatbubble ">සුභ උදෑසනක් {{name}}! කොහොමද මම ඔයාට උදව් කරන්නෙ?</span>
                         </div>
                         <div class="col-md-1"></div>
                       </div>
@@ -136,7 +169,7 @@
                       <div class="row" style="margin-bottom: 15px;">
                         <div class="col-md-3"></div>
                         <div class="col-md-9">
-                          <span color="primary" class="chatbubble right">{{ telephone }}</span>
+                          <span color="primary" *ngIf="telephone" class="chatbubble right">{{ telephone }}</span>
                         </div>
                       </div>
 
@@ -206,7 +239,7 @@
                     <div class="row" style="margin-bottom: 15px;">
                       
                       <div class="col-md-11">
-                        <span class="chatbubble ">සුභ උදෑසනක්! කොහොමද මම ඔයාට උදව් කරන්නෙ?</span>
+                        <span class="chatbubble ">{{name}}, කොහොමද මම ඔයාට උදව් කරන්නෙ?</span>
                       </div>
                       <div class="col-md-1"></div>
                     </div>
@@ -269,7 +302,7 @@
 
               <div class="chatbubble" style="border-radius: 10px!important;">
                 <p>
-                  දැන් ඔබට අවශ්‍ය වන්නේ ටී එකක් මිලදී ගැනීමට බව පවසන්න.
+                  ලබා දී ඇති ිි අතරින් කොළ පැහැ t-shirt එකෙහි හි ඔබට අවශ්‍ය size ක තිබේ දැයි අහන්න.
                </p>
               </div>
 
@@ -280,11 +313,14 @@
             <div class="col-lg-6 col-md-6 col-xs-12">
               <mat-card class="bottomparent" style="padding: 10px;">  
 
-                <div class=" container-fluid alignbottom">
+                <div class=" container-fluid ">
                   <div class="row" style="margin-bottom: 15px;">
                     
                     <div class="col-md-11">
-                      <span class="chatbubble ">සුභ උදෑසනක්! කොහොමද මම ඔයාට උදව් කරන්නෙ?</span>
+                      <span class="chatbubble ">මේවා තමා අපි ගාව තියෙන ඩිසයින්..</span>
+                      <span class="">
+                        <img src="../../assets/img/shirtset.PNG" alt="" style="height: 250px;max-width: 100%;">
+                      </span>
                     </div>
                     <div class="col-md-1"></div>
                   </div>
