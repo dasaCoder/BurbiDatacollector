@@ -522,9 +522,15 @@
 
     <mat-step>
       <ng-template matStepLabel>Done</ng-template>
-      <div style="text-align: center;">
-        <img src="../../assets/img/thanks.gif" alt="" style="width: 80%;">
-      </div>
+
+      <mat-card>
+        <div style="text-align: center;">
+          <mat-card-title>
+            Thank you {{name}}!
+          </mat-card-title>
+          <img src="../../assets/img/thanks.gif" alt="" style="width: 80%;">
+        </div>
+      </mat-card>
       <!-- <div>
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button>Done</button>

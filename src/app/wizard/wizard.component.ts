@@ -8,7 +8,7 @@ import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angula
   styleUrls: ['./wizard.component.css']
 })
 export class WizardComponent implements OnInit {
-  isLinear = true ;
+  isLinear = false ;
 
   telephone:string;
   address:string;
