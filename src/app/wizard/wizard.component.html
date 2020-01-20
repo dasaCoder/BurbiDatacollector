@@ -5,7 +5,7 @@
         <ng-template matStepLabel>Details</ng-template>
 
         <div class="container">
-            <mat-card>
+            <mat-card class="maincard">
               <mat-card-content>
                 <div class="row">
                   <div class="col-lg-6 col-md-6 col-xs-12">
@@ -96,7 +96,7 @@
         <ng-template matStepLabel></ng-template>
 
         <div class="container">
-          <mat-card>
+          <mat-card class="maincard">
             <mat-card-content>
               <div class="row">
                 <div class="col-lg-6 col-md-6 col-xs-12">
@@ -161,7 +161,7 @@
           </mat-card>
 
           <div>
-            <button mat-raised-button color="primary" class="nxtbtn"  matStepperNext>Next</button>
+            <button mat-raised-button color="primary" class="nxtbtn"  matStepperNext [disabled]="!telephone">Next</button>
             <button mat-raised-button color="warn" class="nxtbtn" matStepperPrevious>Back</button>
           </div>
       </div>
@@ -174,7 +174,7 @@
       <ng-template matStepLabel></ng-template>
 
       <div class="container">
-        <mat-card>
+        <mat-card class="maincard">
           <mat-card-content>
             <div class="row">
               <div class="col-lg-6 col-md-6 col-xs-12">
@@ -252,7 +252,7 @@
     <ng-template matStepLabel></ng-template>
 
     <div class="container">
-      <mat-card>
+      <mat-card class="maincard">
         <mat-card-content>
           <div class="row">
             <div class="col-lg-6 col-md-6 col-xs-12">
@@ -330,7 +330,7 @@
   <ng-template matStepLabel></ng-template>
 
   <div class="container">
-    <mat-card>
+    <mat-card class="maincard">
       <mat-card-content>
         <div class="row">
           <div class="col-lg-6 col-md-6 col-xs-12">
@@ -408,7 +408,7 @@
   <ng-template matStepLabel></ng-template>
 
   <div class="container">
-    <mat-card>
+    <mat-card class="maincard">
       <mat-card-content>
         <div class="row">
           <div class="col-lg-6 col-md-6 col-xs-12">

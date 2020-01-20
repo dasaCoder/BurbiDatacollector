@@ -6,7 +6,7 @@
 }
 
 textarea{
-    padding: 10px;
+    padding: 10px!important;
 }
 
 .right{
@@ -49,4 +49,8 @@ textarea{
 .bottomparent{
     position: relative;
     min-height: 150px;height: 100%;
+}
+
+.maincard{
+    min-height: 600px;
 }
