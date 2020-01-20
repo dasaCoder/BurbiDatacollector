@@ -4,7 +4,7 @@
       <div>
         <ng-template matStepLabel>Details</ng-template>
 
-        <div class="container">
+        <div class="container-fluid">
             <mat-card class="maincard">
               <mat-card-content>
                 <div class="row">
@@ -35,6 +35,7 @@
 
                     </div>
                   </div>
+                  
                   <div class="col-lg-6 col-md-6 col-xs-12">
                     <mat-card class="bottomparent" style="padding: 10px;">  
                       <mat-card-title>Example</mat-card-title>  
@@ -69,7 +70,7 @@
                         </div>
                         <div class="row" style="margin-bottom: 15px;">
                           <div class="col-md-12">
-                            <button mat-icon-button class="right">
+                            <button mat-icon-button class="right" matStepperNext>
                               <img src="../../assets/img/sendicon.png" style="max-width: 70%;" alt="">
                             </button>
                             
@@ -146,7 +147,7 @@
                       </div>
                       <div class="row" style="margin-bottom: 15px;">
                         <div class="col-md-12">
-                          <button mat-icon-button class="right" matStepperNext>
+                          <button mat-icon-button class="right"  [disabled]="!telephone" matStepperNext>
                             <img src="../../assets/img/sendicon.png" style="max-width: 70%;" alt="">
                           </button>
                           
@@ -224,7 +225,7 @@
                     </div>
                     <div class="row" style="margin-bottom: 15px;">
                       <div class="col-md-12">
-                        <button mat-icon-button class="right" matStepperNext>
+                        <button mat-icon-button class="right"  [disabled]="!openingHours" matStepperNext>
                           <img src="../../assets/img/sendicon.png" style="max-width: 70%;" alt="">
                         </button>
                         
@@ -302,7 +303,7 @@
                   </div>
                   <div class="row" style="margin-bottom: 15px;">
                     <div class="col-md-12">
-                      <button mat-icon-button class="right" matStepperNext>
+                      <button mat-icon-button class="right"  [disabled]="!order" matStepperNext>
                         <img src="../../assets/img/sendicon.png" style="max-width: 70%;" alt="">
                       </button>
                       
@@ -380,7 +381,7 @@
                 </div>
                 <div class="row" style="margin-bottom: 15px;">
                   <div class="col-md-12">
-                    <button mat-icon-button class="right" matStepperNext>
+                    <button mat-icon-button class="right"  [disabled]="!changeAddress" matStepperNext>
                       <img src="../../assets/img/sendicon.png" style="max-width: 70%;" alt="">
                     </button>
                     
@@ -458,7 +459,7 @@
                 </div>
                 <div class="row" style="margin-bottom: 15px;">
                   <div class="col-md-12">
-                    <button mat-icon-button class="right" matStepperNext>
+                    <button mat-icon-button class="right"  [disabled]="!cancelOrder" matStepperNext>
                       <img src="../../assets/img/sendicon.png" style="max-width: 70%;" alt="">
                     </button>
                     
@@ -473,7 +474,7 @@
     </mat-card>
 
     <div>
-      <button mat-raised-button color="primary" class="nxtbtn"  matStepperNext>Next</button>
+      <button mat-raised-button color="primary" class="nxtbtn"  matStepperNext (click)="uploadData()">Next</button>
       <button mat-raised-button color="warn" class="nxtbtn" matStepperPrevious>Back</button>
     </div>
 </div>
@@ -483,10 +484,12 @@
 
     <mat-step>
       <ng-template matStepLabel>Done</ng-template>
-      You are now done.
+      <div style="text-align: center;">
+        <img src="../../assets/img/thanks.gif" alt="" style="width: 80%;">
+      </div>
       <div>
         <button mat-button matStepperPrevious>Back</button>
-        <button mat-button (click)="uploadData()">Done</button>
+        <button mat-button>Done</button>
       </div>
     </mat-step>
 
