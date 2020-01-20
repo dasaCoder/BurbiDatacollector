@@ -5,6 +5,10 @@
     float: right;
 }
 
+textarea{
+    padding: 10px;
+}
+
 .right{
     float: right;
     background: #0077cc!important;

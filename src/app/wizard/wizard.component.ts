@@ -9,20 +9,20 @@ import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angula
 })
 export class WizardComponent implements OnInit {
   isLinear = true;
-  firstFormGroup: FormGroup;
-  secondFormGroup: FormGroup;
 
-  constructor(private db: AngularFireDatabase, private _formBuilder: FormBuilder) { 
+  telephone:string;
+  address:string;
+  openingHours:string;
+  order:string;
+  changeAddress:string;
+  cancelOrder:string;
+
+  constructor(private db: AngularFireDatabase) { 
 
   }
 
   ngOnInit() {
-    this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required]
-    });
-    this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required]
-    });
+
   }
 
   uploadData(){

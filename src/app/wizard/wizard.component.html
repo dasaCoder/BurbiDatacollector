@@ -6,9 +6,6 @@
 
         <div class="container">
             <mat-card>
-  
-
-
               <mat-card-content>
                 <div class="row">
                   <div class="col-lg-6 col-md-6 col-xs-12">
@@ -42,7 +39,7 @@
                     <mat-card class="bottomparent" style="padding: 10px;">  
                       <mat-card-title>Example</mat-card-title>  
 
-                      <div class="chatbubble" style="border-radius: 10px!important;">
+                      <div class="chatbubble" style="border-radius: 10px!important;background: #ffd1d1;">
                         <p>
                         In the given example for a scenario where customer asked for a details about a show room.</p>
                       </div>
@@ -94,18 +91,395 @@
       </div>
     </mat-step>
 
-    <mat-step [stepControl]="secondFormGroup">
-      <form [formGroup]="secondFormGroup">
-        <ng-template matStepLabel>Fill out your address</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="Address" formControlName="secondCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
+    <mat-step>
+      
+        <ng-template matStepLabel></ng-template>
+
+        <div class="container">
+          <mat-card>
+            <mat-card-content>
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-xs-12">
+
+                  <div style="text-align: center;">
+                    <mat-card-title>
+                      Ask for Contact Number
+                    </mat-card-title>
+                    <img src="../../assets/img/bot2.png" alt="" style="max-width: 60%;">
+                  </div>
+
+                  <div class="chatbubble" style="border-radius: 10px!important;">
+                    <p>
+                      ඔබට ඔබ වාසය කරන නගරයේ පිහිටා තිබෙන ශාඛාව හා සම්බන්ධ විය හැකි දුරකථන අංකයක් ලබා ගැනීමට අවශ්‍ය බව කියන්න.
+                   </p>
+                  </div>
+
+                <div>
+
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                  <mat-card class="bottomparent" style="padding: 10px;">  
+
+                    <div class=" container-fluid alignbottom">
+                      <div class="row" style="margin-bottom: 15px;">
+                        
+                        <div class="col-md-11">
+                          <span class="chatbubble ">සුභ උදෑසනක්! කොහොමද මම ඔයාට උදව් කරන්නෙ?</span>
+                        </div>
+                        <div class="col-md-1"></div>
+                      </div>
+
+                      <div class="row" style="margin-bottom: 15px;">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-9">
+                          <span color="primary" class="chatbubble right">{{ telephone }}</span>
+                        </div>
+                      </div>
+
+                      <div class="row" style="margin-bottom:3px;padding:0 10px;">
+                        <mat-form-field class="full-width">
+                          <textarea matInput class="msgbox" rows="5" [(ngModel)]="telephone"></textarea>
+                        </mat-form-field>
+
+                        
+                      </div>
+                      <div class="row" style="margin-bottom: 15px;">
+                        <div class="col-md-12">
+                          <button mat-icon-button class="right" matStepperNext>
+                            <img src="../../assets/img/sendicon.png" style="max-width: 70%;" alt="">
+                          </button>
+                          
+                        </div>
+                      </div>
+                    </div>                 
+
+                  </mat-card>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+
+          <div>
+            <button mat-raised-button color="primary" class="nxtbtn"  matStepperNext>Next</button>
+            <button mat-raised-button color="warn" class="nxtbtn" matStepperPrevious>Back</button>
+          </div>
+      </div>
+
+      
     </mat-step>
+
+    <mat-step>
+      
+      <ng-template matStepLabel></ng-template>
+
+      <div class="container">
+        <mat-card>
+          <mat-card-content>
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-xs-12">
+
+                <div style="text-align: center;">
+                  <mat-card-title>
+                    Ask for Openning Hours
+                  </mat-card-title>
+                  <img src="../../assets/img/bot2.png" alt="" style="max-width: 60%;">
+                </div>
+
+                <div class="chatbubble" style="border-radius: 10px!important;">
+                  <p>
+                    දැන් ඔබට අවශ්‍ය වන්නේ අදාල ශාඛාව විවෘතව ඇති වේලාවන් දැන ගැනීමටයි.
+                 </p>
+                </div>
+
+              <div>
+
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-xs-12">
+                <mat-card class="bottomparent" style="padding: 10px;">  
+
+                  <div class=" container-fluid alignbottom">
+                    <div class="row" style="margin-bottom: 15px;">
+                      
+                      <div class="col-md-11">
+                        <span class="chatbubble ">සුභ උදෑසනක්! කොහොමද මම ඔයාට උදව් කරන්නෙ?</span>
+                      </div>
+                      <div class="col-md-1"></div>
+                    </div>
+
+                    <div class="row" style="margin-bottom: 15px;">
+                      <div class="col-md-3"></div>
+                      <div class="col-md-9">
+                        <span color="primary" class="chatbubble right">{{ openingHours }}</span>
+                      </div>
+                    </div>
+
+                    <div class="row" style="margin-bottom:3px;padding:0 10px;">
+                      <mat-form-field class="full-width">
+                        <textarea matInput class="msgbox" rows="5" [(ngModel)]="openingHours"></textarea>
+                      </mat-form-field>
+
+                      
+                    </div>
+                    <div class="row" style="margin-bottom: 15px;">
+                      <div class="col-md-12">
+                        <button mat-icon-button class="right" matStepperNext>
+                          <img src="../../assets/img/sendicon.png" style="max-width: 70%;" alt="">
+                        </button>
+                        
+                      </div>
+                    </div>
+                  </div>                 
+
+                </mat-card>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+
+        <div>
+          <button mat-raised-button color="primary" class="nxtbtn"  matStepperNext>Next</button>
+          <button mat-raised-button color="warn" class="nxtbtn" matStepperPrevious>Back</button>
+        </div>
+    </div>
+
+    
+  </mat-step>
+
+  <mat-step>
+      
+    <ng-template matStepLabel></ng-template>
+
+    <div class="container">
+      <mat-card>
+        <mat-card-content>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-xs-12">
+
+              <div style="text-align: center;">
+                <mat-card-title>
+                  Buy a T-shirt
+                </mat-card-title>
+                <img src="../../assets/img/bot2.png" alt="" style="max-width: 60%;">
+              </div>
+
+              <div class="chatbubble" style="border-radius: 10px!important;">
+                <p>
+                  දැන් ඔබට අවශ්‍ය වන්නේ ටී එකක් මිලදී ගැනීමට බව පවසන්න.
+               </p>
+              </div>
+
+            <div>
+
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12">
+              <mat-card class="bottomparent" style="padding: 10px;">  
+
+                <div class=" container-fluid alignbottom">
+                  <div class="row" style="margin-bottom: 15px;">
+                    
+                    <div class="col-md-11">
+                      <span class="chatbubble ">සුභ උදෑසනක්! කොහොමද මම ඔයාට උදව් කරන්නෙ?</span>
+                    </div>
+                    <div class="col-md-1"></div>
+                  </div>
+
+                  <div class="row" style="margin-bottom: 15px;">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-9">
+                      <span color="primary" class="chatbubble right">{{ order }}</span>
+                    </div>
+                  </div>
+
+                  <div class="row" style="margin-bottom:3px;padding:0 10px;">
+                    <mat-form-field class="full-width">
+                      <textarea matInput class="msgbox" rows="5" [(ngModel)]="order"></textarea>
+                    </mat-form-field>
+
+                    
+                  </div>
+                  <div class="row" style="margin-bottom: 15px;">
+                    <div class="col-md-12">
+                      <button mat-icon-button class="right" matStepperNext>
+                        <img src="../../assets/img/sendicon.png" style="max-width: 70%;" alt="">
+                      </button>
+                      
+                    </div>
+                  </div>
+                </div>                 
+
+              </mat-card>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <div>
+        <button mat-raised-button color="primary" class="nxtbtn"  matStepperNext>Next</button>
+        <button mat-raised-button color="warn" class="nxtbtn" matStepperPrevious>Back</button>
+      </div>
+  </div>
+
+  
+</mat-step>
+
+<mat-step>
+      
+  <ng-template matStepLabel></ng-template>
+
+  <div class="container">
+    <mat-card>
+      <mat-card-content>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-xs-12">
+
+            <div style="text-align: center;">
+              <mat-card-title>
+                Ask for Change the Delivery Address
+              </mat-card-title>
+              <img src="../../assets/img/bot2.png" alt="" style="max-width: 60%;">
+            </div>
+
+            <div class="chatbubble" style="border-radius: 10px!important;">
+              <p>
+                ඇණවුම සදහා ලබා දුන් ලිපිනය( Delivery Address) වෙනස් කිරීමට වන බව chatbot ට කියන්න. ඔබේ ඇණවුම් අංකය #2345 වේ.
+             </p>
+            </div>
+
+          <div>
+
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-xs-12">
+            <mat-card class="bottomparent" style="padding: 10px;">  
+
+              <div class=" container-fluid alignbottom">
+                <div class="row" style="margin-bottom: 15px;">
+                  
+                  <div class="col-md-11">
+                    <span class="chatbubble ">සුභ උදෑසනක්! කොහොමද මම ඔයාට උදව් කරන්නෙ?</span>
+                  </div>
+                  <div class="col-md-1"></div>
+                </div>
+
+                <div class="row" style="margin-bottom: 15px;">
+                  <div class="col-md-3"></div>
+                  <div class="col-md-9">
+                    <span color="primary" class="chatbubble right">{{ changeAddress }}</span>
+                  </div>
+                </div>
+
+                <div class="row" style="margin-bottom:3px;padding:0 10px;">
+                  <mat-form-field class="full-width">
+                    <textarea matInput class="msgbox" rows="5" [(ngModel)]="changeAddress"></textarea>
+                  </mat-form-field>
+
+                  
+                </div>
+                <div class="row" style="margin-bottom: 15px;">
+                  <div class="col-md-12">
+                    <button mat-icon-button class="right" matStepperNext>
+                      <img src="../../assets/img/sendicon.png" style="max-width: 70%;" alt="">
+                    </button>
+                    
+                  </div>
+                </div>
+              </div>                 
+
+            </mat-card>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <div>
+      <button mat-raised-button color="primary" class="nxtbtn"  matStepperNext>Next</button>
+      <button mat-raised-button color="warn" class="nxtbtn" matStepperPrevious>Back</button>
+    </div>
+</div>
+
+
+</mat-step>
+
+<mat-step>
+      
+  <ng-template matStepLabel></ng-template>
+
+  <div class="container">
+    <mat-card>
+      <mat-card-content>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-xs-12">
+
+            <div style="text-align: center;">
+              <mat-card-title>
+                Cancel the Order
+              </mat-card-title>
+              <img src="../../assets/img/bot2.png" alt="" style="max-width: 60%;">
+            </div>
+
+            <div class="chatbubble" style="border-radius: 10px!important;">
+              <p>
+                යම් කිසි හේතුවක් මත ඔබ කළ ඇණවුම අවලංගු කිරීමට සිදු වේ. ඒ බව chatbot ට පවසන්න. ඔබේ ඇණවුම් අංකය #2345 වේ.
+             </p>
+            </div>
+
+          <div>
+
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-xs-12">
+            <mat-card class="bottomparent" style="padding: 10px;">  
+
+              <div class=" container-fluid alignbottom">
+                <div class="row" style="margin-bottom: 15px;">
+                  
+                  <div class="col-md-11">
+                    <span class="chatbubble ">කොහොමද මම ඔයාට උදව් කරන්නෙ?</span>
+                  </div>
+                  <div class="col-md-1"></div>
+                </div>
+
+                <div class="row" style="margin-bottom: 15px;">
+                  <div class="col-md-3"></div>
+                  <div class="col-md-9">
+                    <span color="primary" class="chatbubble right">{{ cancelOrder }}</span>
+                  </div>
+                </div>
+
+                <div class="row" style="margin-bottom:3px;padding:0 10px;">
+                  <mat-form-field class="full-width">
+                    <textarea matInput class="msgbox" rows="5" [(ngModel)]="cancelOrder"></textarea>
+                  </mat-form-field>
+
+                  
+                </div>
+                <div class="row" style="margin-bottom: 15px;">
+                  <div class="col-md-12">
+                    <button mat-icon-button class="right" matStepperNext>
+                      <img src="../../assets/img/sendicon.png" style="max-width: 70%;" alt="">
+                    </button>
+                    
+                  </div>
+                </div>
+              </div>                 
+
+            </mat-card>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <div>
+      <button mat-raised-button color="primary" class="nxtbtn"  matStepperNext>Next</button>
+      <button mat-raised-button color="warn" class="nxtbtn" matStepperPrevious>Back</button>
+    </div>
+</div>
+
+
+</mat-step>
 
     <mat-step>
       <ng-template matStepLabel>Done</ng-template>
