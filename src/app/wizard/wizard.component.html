@@ -1,11 +1,13 @@
   <mat-horizontal-stepper [linear]="isLinear" #stepper>
 
+    <!-- example -->
     <mat-step >
       <div>
         <ng-template matStepLabel>Details</ng-template>
 
         <div class="container-fluid">
             <mat-card class="maincard">
+
               <mat-card-content>
                 <div class="row">
                   <div class="col-lg-6 col-md-6 col-xs-12">
@@ -14,7 +16,7 @@
                       <mat-card-title>
                         ආයුබෝවන්!
                       </mat-card-title>
-                      <img src="../../assets/img/bot2.png" alt="" style="max-width: 60%;">
+                      <img src="../../assets/img/bot2.png" alt="" style="max-width: 70%; padding-bottom: 10px;">
                     </div>
 
                     <div class="chatbubble" style="border-radius: 10px!important;">
@@ -91,7 +93,7 @@
         
       </div>
     </mat-step>
-
+<!-- contact number -->
     <mat-step>
       
         <ng-template matStepLabel></ng-template>
@@ -106,7 +108,7 @@
                     <mat-card-title>
                       Ask for Contact Number
                     </mat-card-title>
-                    <img src="../../assets/img/bot2.png" alt="" style="max-width: 60%;">
+                    <img src="../../assets/img/location.png" alt="" style="max-width: 70%; padding-bottom: 10px;">
                   </div>
 
                   <div class="chatbubble" style="border-radius: 10px!important;">
@@ -184,7 +186,7 @@
                   <mat-card-title>
                     Ask for Openning Hours
                   </mat-card-title>
-                  <img src="../../assets/img/bot2.png" alt="" style="max-width: 60%;">
+                  <img src="../../assets/img/hours.png" alt="" style="max-width: 70%; padding-bottom: 10px;">
                 </div>
 
                 <div class="chatbubble" style="border-radius: 10px!important;">
@@ -212,7 +214,7 @@
                     <div class="row" style="margin-bottom: 15px;">
                       <div class="col-md-3"></div>
                       <div class="col-md-9">
-                        <span color="primary" class="chatbubble right">{{ openingHours }}</span>
+                        <span color="primary" *ngIf="openingHours" class="chatbubble right">{{ openingHours }}</span>
                       </div>
                     </div>
 
@@ -262,7 +264,7 @@
                 <mat-card-title>
                   Buy a T-shirt
                 </mat-card-title>
-                <img src="../../assets/img/bot2.png" alt="" style="max-width: 60%;">
+                <img src="../../assets/img/tshir.png" alt="" style="max-width: 70%; padding-bottom: 10px;">
               </div>
 
               <div class="chatbubble" style="border-radius: 10px!important;">
@@ -290,7 +292,7 @@
                   <div class="row" style="margin-bottom: 15px;">
                     <div class="col-md-3"></div>
                     <div class="col-md-9">
-                      <span color="primary" class="chatbubble right">{{ order }}</span>
+                      <span color="primary" *ngIf="order" class="chatbubble right">{{ order }}</span>
                     </div>
                   </div>
 
@@ -340,7 +342,7 @@
               <mat-card-title>
                 Ask for Change the Delivery Address
               </mat-card-title>
-              <img src="../../assets/img/bot2.png" alt="" style="max-width: 60%;">
+              <img src="../../assets/img/address.jpg" alt="" style="max-width: 70%; padding-bottom: 10px;">
             </div>
 
             <div class="chatbubble" style="border-radius: 10px!important;">
@@ -368,7 +370,7 @@
                 <div class="row" style="margin-bottom: 15px;">
                   <div class="col-md-3"></div>
                   <div class="col-md-9">
-                    <span color="primary" class="chatbubble right">{{ changeAddress }}</span>
+                    <span color="primary" *ngIf="changeAddress" class="chatbubble right">{{ changeAddress }}</span>
                   </div>
                 </div>
 
@@ -418,7 +420,7 @@
               <mat-card-title>
                 Cancel the Order
               </mat-card-title>
-              <img src="../../assets/img/bot2.png" alt="" style="max-width: 60%;">
+              <img src="../../assets/img/angrybot.jpg" alt="" style="max-width: 70%; padding-bottom: 10px;">
             </div>
 
             <div class="chatbubble" style="border-radius: 10px!important;">
@@ -446,7 +448,7 @@
                 <div class="row" style="margin-bottom: 15px;">
                   <div class="col-md-3"></div>
                   <div class="col-md-9">
-                    <span color="primary" class="chatbubble right">{{ cancelOrder }}</span>
+                    <span color="primary" *ngIf="cancelOrder" class="chatbubble right">{{ cancelOrder }}</span>
                   </div>
                 </div>
 
@@ -487,10 +489,10 @@
       <div style="text-align: center;">
         <img src="../../assets/img/thanks.gif" alt="" style="width: 80%;">
       </div>
-      <div>
+      <!-- <div>
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button>Done</button>
-      </div>
+      </div> -->
     </mat-step>
 
   </mat-horizontal-stepper>
