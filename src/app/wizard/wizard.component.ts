@@ -8,7 +8,7 @@ import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angula
   styleUrls: ['./wizard.component.css']
 })
 export class WizardComponent implements OnInit {
-  isLinear = false ;
+  isLinear = true;
 
   telephone:string;
   address:string;
@@ -30,7 +30,6 @@ export class WizardComponent implements OnInit {
     this.db.list('/responses').push({
       "name":this.name,
       "telephone":this.telephone,
-      "address":this.address,
       "openingHousrs":this.openingHours,
       "order":this.order,
       "changeAddress":this.changeAddress,
